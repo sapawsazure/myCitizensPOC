@@ -1,0 +1,27 @@
+.month-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-end;
+  margin: 8px 0 16px;
+}
+
+.month-nav .field {
+  flex: 0 0 auto;
+  min-width: 170px;
+}
+
+.day-group {
+  margin-top: 20px;
+}
+
+.day-group h2 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.event-time {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
