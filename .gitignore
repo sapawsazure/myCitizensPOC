@@ -1,0 +1,18 @@
+# Backend build output and generated UI (written by "npm run build")
+backend/target/
+backend/src/main/resources/static/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Local configuration / secrets (use .env.example as the template)
+.env
+
+# IDE / OS / logs
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

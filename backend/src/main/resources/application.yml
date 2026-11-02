@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: hub
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:hubdb}
+    username: ${DB_USER:hub}
+    password: ${DB_PASSWORD:hub_local_pw}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+server:
+  port: ${SERVER_PORT:8180}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+# Filled in by Maven resource filtering; shown in the UI footer and in /api/features
+app:
+  version: "@project.version@"

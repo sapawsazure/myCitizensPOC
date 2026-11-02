@@ -1,0 +1,24 @@
+# Local PostgreSQL for Productivity Hub. Works with zero configuration;
+# override with a .env file (see .env.example).
+services:
+  postgres:
+    # PostgreSQL 17 on Debian 12 (bookworm): unlike the Debian 13 based "postgres:17" it still knows legacy
+    # time zone names such as Asia/Calcutta, which the JDBC driver sends from the JVM's default zone.
+    image: postgres:17-bookworm
+    container_name: hub-postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME:-hubdb}
+      POSTGRES_USER: ${DB_USER:-hub}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-hub_local_pw}
+    ports:
+      - "127.0.0.1:${DB_PORT:-5432}:5432"
+    volumes:
+      - hub_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  hub_pgdata:
