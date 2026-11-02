@@ -1,0 +1,35 @@
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.summary-table caption {
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 14px;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 8px 14px;
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+
+.summary-table .amount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-table tfoot th {
+  font-weight: 700;
+}
+
+.expense-amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}

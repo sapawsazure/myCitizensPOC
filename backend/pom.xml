@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.poc</groupId>
 	<artifactId>hub</artifactId>
-	<version>1.0.0</version>
+	<version>2.0.0</version>
 	<name>hub</name>
 	<description>Productivity Hub - Spring Boot backend (POC)</description>
 	<properties>

@@ -4,7 +4,7 @@ A proof of concept that shows how a **Spring Boot + React + PostgreSQL** applica
 through **Git branches and merges**. Each phase adds new features, new database tables and new UI, and reaches the
 `main` branch through a merge.
 
-**Status: Phase 1 — 3 features** (Tasks, Notes, Bookmarks). Version `1.0.0`.
+**Status: Phase 2 — 5 features** (Tasks, Notes, Bookmarks, Expenses, Habits). Version `2.0.0`.
 
 Everything runs on **one URL**: Spring Boot serves the REST API (`/api/**`) and the compiled React app on the same
 port — **http://localhost:8180**.
@@ -16,6 +16,8 @@ port — **http://localhost:8180**.
 | 1 | Tasks | Phase 1 | `tasks` | `/api/tasks` |
 | 2 | Notes | Phase 1 | `notes` | `/api/notes` |
 | 3 | Bookmarks | Phase 1 | `bookmarks` | `/api/bookmarks` |
+| 4 | Expenses | Phase 2 | `expense_categories`, `expenses` | `/api/expenses` |
+| 5 | Habits | Phase 2 | `habits`, `habit_checkins` | `/api/habits` |
 
 The home page shows one card per feature module found in the build; `GET /api/features` lists the modules present in
 the backend. If the two disagree (for example a half-merged phase) the home page shows a warning banner.
@@ -46,7 +48,7 @@ and starts Spring Boot. When it prints `Started HubApplication`, open **http://l
 
 Verify a running instance (expects the number of features of your phase):
 ```bash
-node scripts/smoke.mjs --expect 3
+node scripts/smoke.mjs --expect 5
 ```
 
 ### Manual steps
