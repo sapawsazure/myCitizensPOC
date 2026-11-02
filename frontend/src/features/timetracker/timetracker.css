@@ -1,0 +1,44 @@
+.clock {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin: 4px 0 12px;
+}
+
+.running-panel {
+  border-color: var(--accent);
+}
+
+.duration {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.totals-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 8px 0 20px;
+}
+
+.totals-table caption {
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 14px;
+}
+
+.totals-table th,
+.totals-table td {
+  padding: 8px 14px;
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+
+.totals-table .time {
+  text-align: right;
+}
